@@ -1,0 +1,84 @@
+
+body {
+    padding: 1em;
+    font-family: Helvetica, Arial, sans-serif;
+    // font-size: calc(1em + 1vw);
+    // line-height: 1.2;
+}
+.normal {
+    padding: 1em;
+}
+.borderNormal(@type) {
+    border: 1px #ccc @type;
+    border-radius: .5em;
+}
+.commonStyle(@type) {
+    .borderNormal(@type);
+    padding: .5em;
+    margin-top: 8px;
+}
+
+// .box {
+//     width: 600px;
+//     font-size: 18px;
+//     padding: 1em;
+//     border: 1px #ccc solid;
+// }
+
+.box {
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgb(39, 185, 149);
+    color: #fff;
+    width: 600px;
+}
+.boxSmall {
+    font-size: 12px;
+}
+.boxLarge {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.parent {
+    border: 1px #ccc solid;
+    width: 600px;
+    border-radius: .5em;
+    padding: .5em;
+    margin-top: 8px;
+}
+.childTitle {
+    font-size: 1.2em;
+}
+
+.slogan {
+    font-size: 1.2em;
+    padding: 1.2em;
+    margin-top: 8px;
+    color: rgb(58, 95, 168);
+    width: 600px;
+    .borderNormal(dashed)
+}
+
+.menuList {
+    width: 600px;
+    color: rgb(238, 161, 18);
+    .commonStyle(dashed);  
+}
+ul {
+   font-size: .8rem; 
+}
+
+.container {
+    width: 90vmin;
+    height: 90vmin;
+    background-color: rgb(7, 201, 191);
+    color: #fff;
+    font-size: 1rem;
+    .commonStyle(dashed); 
+    @media screen and (min-width: 780px) {
+        font-size: 1.5rem;
+    }
+}
+
+section.main { font-size: 16px; line-height: 1.4; @media screen and (max-width: 1200px) { float: left; width: 65%; } @media screen and (max-width: 800px) { float: none; width: auto; } @media screen and (max-width: 500px) { font-size: 12px; line-height: 1.4; } }

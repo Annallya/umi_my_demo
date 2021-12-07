@@ -1,0 +1,59 @@
+.testModal {
+    .ant-modal {
+        width: 896px !important;
+    }
+
+    .container1 {
+        height: 156px;
+        display: flex;
+        margin-left: 106px;
+        margin-bottom: 12px;
+        overflow-y: auto;
+        :global {
+            .ant-table-tbody > tr.activeRow td {
+                border: 1px #1980FF dashed;
+                background-color: #E6F1FF;
+            } 
+
+            .ant-table-tbody > tr.activeRow td:nth-child(1) {
+                border-right: 0;
+            }
+
+            .ant-table-tbody > tr.activeRow td:last-child {
+                border-left: 0;
+            }
+
+            .ant-table-tbody > tr.errorRow td {
+                border: 1px #EA1E1E dashed;       
+                background: rgba(234, 30, 30, 0.3);
+            } 
+
+            .ant-table-tbody > tr.errorRow td:nth-child(1) {
+                border-right: 0;
+            }
+
+            .ant-table-tbody > tr.errorRow td:last-child {
+                border-left: 0;
+            }
+        }
+        .left {
+            height: 100%;
+            
+        }
+        .center {
+            width: 128px;
+            .centerTopShow {
+                height: 56px;
+                line-height: 56px;
+                text-align: center;
+                visibility: visible;
+                color: #ea1e1e;
+              }
+        
+              .centerTopHide {
+                visibility: hidden;
+                height: 56px;
+              }
+        }
+    }
+}

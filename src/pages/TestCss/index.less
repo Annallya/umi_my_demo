@@ -1,0 +1,84 @@
+#root {
+    font-size: calc(0.2em + 1vw);
+    line-height: 1.2;
+    --main-color: #000;
+    --main-bg: #fff;
+}
+// *通过媒体查询，修改字号
+@media (min-width: 800px) {
+   
+}
+h1 {
+    color: #2f4f4f;
+    margin-bottom: 10px;
+}
+
+.nav{
+    margin-top: 10px; // 貌似没什么用啊
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav li {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.nav a {
+    color: white;
+    background-color: #13a4a4;
+    padding: 5px 16px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.nav .featured {
+    background-color: orange;  
+    box-shadow: 10px 2px #6f9090; // 先水平 后垂直
+}
+
+// *中间样式
+.mainSection {
+    height: "calc(100% - 121px)";
+}
+.padded {
+    font-size: 16px;
+    padding: 1em;
+}
+
+.panel {
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px #ccc solid;
+    margin-bottom: 12px;
+    background-color: var(--main-bg);
+    color: var(--main-color);
+}
+
+.panel > h2 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.dark {
+    --main-bg: #333;
+    --main-color: #fff;
+}
+
+
+
+
+// *页脚样式
+.footer {
+    color: #666;
+    background-color: #ccc;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: initial;
+    text-decoration: underline;
+}

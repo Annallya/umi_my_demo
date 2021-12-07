@@ -1,0 +1,53 @@
+
+
+
+:global {
+    .text {
+        font-size: 1rem;
+    }
+}
+@media screen and
+         (-webkit-min-device-pixel-ratio: 1) and (-webkit-max-device-pixel-ratio: 1.25)
+ {
+    :global {
+        .text {
+            color: green;
+        }
+    }
+ }
+.tableWraper {
+      // * 设备像素比在1.25 - 1.6之间的样式
+  // @media screen and (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 1.6) {
+  //   border: 1px red solid;
+  // }
+
+  @media screen and (-webkit-device-pixel-ratio: 1.25) {
+    :global {
+      .ant-table-thead > tr > th,
+      .ant-table-tbody > tr > td,
+      .ant-table tfoot > tr > th,
+      .ant-table tfoot > tr > td {
+        padding-top: 12.6px;
+      }
+    }
+  }
+}
+
+.side {
+  flex: 1;
+  
+  .inner {
+    padding: 6px 0;
+    height: 36px;
+    border: 1px #ccc solid;
+  }
+}
+
+.center {
+  width: 200px;
+  padding: 14px 0;
+  .inner {
+    border-top: 1px #ccc solid;
+  }
+}
+

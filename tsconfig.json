@@ -1,0 +1,55 @@
+// {
+//   "compilerOptions": {
+//     "target": "esnext",
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "importHelpers": true,
+//     "jsx": "react",
+//     "esModuleInterop": true,
+//     "sourceMap": true,
+//     "baseUrl": ".",
+//     "strict": true,
+//     "paths": {
+//       "@/*": ["src/*"],
+//       "@tmp/*": ["src/pages/.umi/*"]
+//     },
+//     "allowSyntheticDefaultImports": true
+//   }
+// }
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2017",
+    "allowSyntheticDefaultImports": true,
+    // import的相对起始路径   
+    "baseUrl": "./src",
+    "sourceMap": true,
+    // 开启`JSX`模式, 
+    // `preserve`的配置让`tsc`不会去处理它，而是使用后续的`babel-loader`进行处理
+    "jsx": "preserve",
+    "strict": true,
+    "moduleResolution": "node",
+    // 开启装饰器的使用
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": false,
+    // `vs code`所需要的，在开发时找到对应的路径，真实的引用是在`webpack`中配置的`alias`
+    "paths": {
+      "src/*": ["./*"],
+      "css/*": ["css/*"],
+      "img/*": ["img/*"],
+      "components/*": ["components/*"],
+      "lib/*": ["lib/*"],
+      "pages/*": ["pages/*"],
+      "common/*": ["pages/common/*"],
+      "utils/*": ["pages/utils/*"],
+      "conf/*": ["conf/*"],
+      "Dataset/*": ["pages/Dataset/*"],
+      "Datasource/*": ["pages/Datasource/*"],
+      "Slice/*": ["pages/Slice/*"],
+      "Works/*": ["pages/Works/*"],
+      "services/*": ["services/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

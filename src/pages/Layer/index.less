@@ -1,0 +1,50 @@
+.customStyle(@bgColor, @top, @left) {
+  position: absolute;
+  top: @top;
+  left: @left;
+  height: 200px;
+  width: 200px;
+  background: @bgColor;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.one {
+    .customStyle(rgb(194, 194, 230), 30px, 30px);
+    transform:translateZ(0)
+  }
+  
+.tow {
+    .customStyle(rgb(205, 216, 144), 50px, 50px);
+  animation: move 1s linear infinite;
+  }
+
+.three {
+    .customStyle(rgb(120, 178, 231), 100px, 300px)
+  }
+
+  .four {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 60px;
+    top: -136px;
+    background: rgb(255, 247, 133);
+  }
+
+  // 裁减
+  .clip {
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    background: rgb(158, 172, 236);
+  }
